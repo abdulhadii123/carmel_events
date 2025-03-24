@@ -134,16 +134,16 @@
     <!-- Form begins -->
     <section class="py-8 md:py-16 " data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
         <div class="wrapper">
-          <div class="main w-full flex flex-col lg:flex-row justify-between items-center gap-10">
+          <div class="main w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-10">
             
             <!-- Left: Form -->
             <div class="left w-full lg:w-[49%] bg-white p-6 shadow-md rounded-lg">
-              <h2 class="text-2xl font-semibold mb-6">Registration Form</h2>
+              <h2 class="text-2xl font-semibold mb-12">Registration Form</h2>
               <form id="registrationForm" method="POST">
                 {% csrf_token %}
                 <div id="student-container">
                     <!-- The first registration form (will be cloned when adding more) -->
-                    <div class="student-form border p-4 rounded-lg mb-4 relative">
+                    <div class="student-form border p-4 mb-[50px] rounded-lg mb-4 relative">
                         <button type="button" class="absolute top-2 right-2 text-red-500 font-bold hidden remove-btn">X</button>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -216,8 +216,8 @@
       
             <!-- Right: Image -->
             <div class="right w-full lg:w-[49%] flex justify-center">
-              <div class="image w-full">
-                <img src="{% static 'images/form-image.png' %}" alt="Form Image" class="w-full lg:h-[600px] rounded-lg shadow-md">
+              <div class="image w-full ">
+                <img src="{% static 'images/form-image.png' %}" alt="Form Image" class="w-full lg:h-[600px] rounded-lg ">
               </div>
             </div>
       
