@@ -1,0 +1,458 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <title>Result</title>
+    <link rel="icon" type="image/png" href="{% static 'images/CHS.png' %}">
+  </head>
+  <body>
+    <header
+    class="bg-white wrapper"
+    data-aos="fade-in"
+    data-aos-delay="300"
+    data-aos-duration="1000"
+  >
+    <div class="container flex justify-between items-center p-4">
+      <!-- Logo -->
+      <div class="flex items-center w-[58px]">
+        <a href="/">  <img src="{% static 'images/CHS.png' %}" alt="Logo" /> </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav id="nav-links" class="hidden md:flex space-x-6">
+        <a
+          href="{% url 'home' %}"
+          class="nav-link text-gray-700 hover:text-blue-600"
+          >Home</a
+        >
+        <a
+          href="{% url 'about' %}"
+          class="nav-link text-gray-700 hover:text-blue-600"
+          >About Carmel Run</a
+        >
+        <a href="{% url 'rulesrootmap' %}" class="nav-link text-gray-700 hover:text-blue-600"
+          >Rules & Route Map</a
+        >
+        <a href="{% url 'result' %}" class="nav-link text-gray-700 hover:text-blue-600"
+          >Result</a
+        >
+      </nav>
+
+      <!-- Register Button -->
+      <div>
+        <a
+          href="{% url 'register' %}"
+          class="bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold italic shadow-md hover:bg-orange-600 transition"
+          >Register Now</a
+        >
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav
+    id="mobile-menu"
+    class="absolute left-0 top-16 w-full bg-white shadow-lg p-4 opacity-0 z-10 invisible transform transition-all duration-300 ease-in-out md:hidden"
+  >
+    <a href="{% url 'home' %}" class="block py-2 text-gray-700 text-blue-600">Home</a>
+    <a href="{% url 'about' %}" class="block py-2 text-gray-700 hover:text-blue-600">
+      About Carmel Run
+    </a>
+    <a href="{% url 'rulesrootmap' %}" class="block py-2 text-gray-700 hover:text-blue-600">
+      Rules & Route Map
+    </a>
+    <a href="{% url 'result' %}" class="block py-2 text-gray-700 hover:text-blue-600">
+      Result
+    </a>
+  </nav>
+  </header>
+    <!-- Header ends -->
+<!-- ================================================================================================================================ -->
+ <!-- breadcrumb  -->
+ <section id="breadcrumb" class="py-8 md:py-16" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+  <div class="wrapper">
+    <div class="container flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      
+      <!-- Left Content -->
+      <div class="left w-full md:w-3/4">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#212121] py-4">
+          🏆 Carmel Run 2025 – Race Results
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl leading-relaxed text-[#6D6D6D]">
+          "Every step counts – Celebrate your achievement!"
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- breadcrumb ends -->
+   <!-- breadcrumb  -->
+   <section id="breadcrumb" class="py-8 md:py-16 bg-[#F9F9F9]" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+    <div class="wrapper ">
+      <div class="py-4 md:py-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          
+          <!-- Left Section -->
+          <div class="text-center md:text-left">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 flex items-center gap-2 mb-4">
+              🏅 Live Race Results
+            </h2>
+            <p class="text-sm sm:text-lg text-gray-600">
+              📊 Track your performance instantly!
+            </p>
+          </div>
+  
+          <!-- Search & Filter Section -->
+          <div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="🔍 Search..."
+              class="w-[90%] sm:w-64 px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:ring focus:ring-blue-300"
+            />
+            <button
+              id="filter-btn"
+              class="bg-white p-2 rounded-full hover:bg-gray-300 transition"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="black" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L15 12.414V18a1 1 0 00.293.707l1 1a1 1 0 01.293.707V21a1 1 0 01-1 1h-4a1 1 0 01-1-1v-.586a1 1 0 01.293-.707l1-1A1 1 0 0015 18v-5.586L4.293 6.707A1 1 0 014 6V4z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Race Results Table -->
+        <div class="overflow-x-auto mt-6 rounded-2xl shadow-lg">
+          <table class="w-full border-collapse bg-white rounded-xl shadow text-sm sm:text-base">
+            <thead>
+              <tr class="bg-[#EFEFEF] text-gray-700">
+                <th class="py-3 px-4 text-left border-r border-[#E7E7E7]">Position</th>
+                <th class="py-3 px-4 text-left border-r border-[#E7E7E7]">Runner Name</th>
+                <th class="py-3 px-4 text-left border-r border-[#E7E7E7]">Category</th>
+                <th class="py-3 px-4 text-left">Timing</th>
+              </tr>
+            </thead>
+            <tbody id="results-table">
+              <tr class="border-t hover:bg-gray-100">
+                <td class="py-3 px-4 border-r border-[#E7E7E7] text-[#6D6D6D]">1</td>
+                <td class="py-3 px-4 border-r border-[#E7E7E7] text-[#6D6D6D]">Rahul Sharma</td>
+                <td class="py-3 px-4 border-r border-[#E7E7E7] text-[#6D6D6D]">Adult 10KM</td>
+                <td class="py-3 px-4 text-[#6D6D6D]">38:20 min</td>
+              </tr>
+              <tr class="border-t hover:bg-gray-100">
+                <td class="py-3 px-4 border-r border-[#E7E7E7] text-[#6D6D6D]">2</td>
+                <td class="py-3 px-4 border-r border-[#E7E7E7] text-[#6D6D6D]">Ananya Ramesh</td>
+                <td class="py-3 px-4 border-r border-[#E7E7E7] text-[#6D6D6D]">Student 5KM</td>
+                <td class="py-3 px-4 text-[#6D6D6D]">24:15 min</td>
+              </tr>
+              <tr class="border-t hover:bg-gray-100">
+                <td class="py-3 px-4 border-r border-[#E7E7E7] text-[#6D6D6D]">3</td>
+                <td class="py-3 px-4 border-r border-[#E7E7E7] text-[#6D6D6D]">Vikram Das</td>
+                <td class="py-3 px-4 border-r border-[#E7E7E7] text-[#6D6D6D]">Adult 5KM</td>
+                <td class="py-3 px-4 text-[#6D6D6D]">26:30 min</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- breadcrumb ends -->
+ <!-- breadcrumb  -->
+ <section id="breadcrumb" class="py-8 md:py-16" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+  <div class="wrapper">
+    <div class="container flex justify-center">
+      <div class="w-full py-6 md:py-8 bg-white rounded-lg ">
+        
+        <!-- Heading -->
+        <h2 class="text-2xl sm:text-3xl font-bold mb-2 flex items-center py-2">
+          <span>📜</span>
+          <span class="ml-2">Download E-Certificates</span>
+        </h2>
+
+        <!-- Subtitle -->
+        <p class="text-gray-600 text-base sm:text-lg mb-6 flex items-center pb-4">
+          <span>🏅</span>
+          <span class="ml-2 text-[#6D6D6D]">Enter your Phone Number to download your official Carmel Run 2025 Certificate!</span>
+        </p>
+
+        <!-- Input & Button -->
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <input 
+            type="number" 
+            placeholder="Enter your Phone Number" 
+            class="w-full sm:w-2/3 p-4 rounded-[20px] bg-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-700"
+          >
+          <button 
+            class="w-full sm:w-1/3 bg-orange-500 hover:bg-orange-600 text-white font-bold italic py-4 px-6 rounded-[20px] transition">
+            Download
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- breadcrumb ends -->
+    <!-- breadcrumb  -->
+ <section id="breadcrumb" class="py-8 md:py-16" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+    <div class="wrapper">
+        <div class="">
+            <h2 class="text-3xl font-bold text-center mb-4">🏁 Previous Year Winners Gallery</h2>
+            <p class="text-center text-gray-600 mb-8">📸 Celebrating the champions of Carmel Run 2024!</p>
+    
+            <div class="owl-carousel owl-theme">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item">
+                    <img src="{% static 'images/slider1.jpg' %}" alt="Winner" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4">
+                        <div class="bg-[#fff] p-3 rounded-xl">
+                            <h3 class="text-black font-bold text-[18px]">Ananya Sharma</h3>
+                            <p class="text-black text-[12px]">Winner of 5KM Student Run (2024) – 🏅 24:15 min</p>
+                           </div>
+                    </div>
+                </div>
+    
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                    <img src="{% static 'images/slider4.jpg' %}" alt="Winner" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4">
+                       <div class="bg-[#fff] p-3 rounded-xl">
+                        <h3 class="text-black font-bold text-[18px]">Ananya Sharma</h3>
+                        <p class="text-black text-[12px]">Winner of 5KM Student Run (2024) – 🏅 24:15 min</p>
+                       </div>
+                    </div>
+                </div>
+    
+                <!-- Carousel Item 3 -->
+                <div class="carousel-item">
+                    <img src="{% static 'images/slider1.jpg' %}" alt="Winner" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4">
+                        <div class="bg-[#fff] p-3 rounded-xl">
+                            <h3 class="text-black font-bold text-[18px]">Ananya Sharma</h3>
+                            <p class="text-black text-[12px]">Winner of 5KM Student Run (2024) – 🏅 24:15 min</p>
+                           </div>
+                    </div>
+                </div>
+    
+                <!-- Carousel Item 4 -->
+                <div class="carousel-item">
+                    <img src="{% static 'images/slider4.jpg' %}" alt="Winner" class="w-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-4">
+                        <div class="bg-[#fff] p-3 rounded-xl">
+                            <h3 class="text-black font-bold text-[18px]">Ananya Sharma</h3>
+                            <p class="text-black text-[12px]">Winner of 5KM Student Run (2024) – 🏅 24:15 min</p>
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</section>
+  <!-- breadcrumb ends -->
+    
+     <!-- ============================================================================================================================= -->
+     <footer
+     class="bg-gray-900 text-white py-10"
+     data-aos="fade"
+     data-aos-delay="100"
+     data-aos-offset="200"
+   >
+     <div class="wrapper">
+       <!-- Logo & School Name -->
+       <div
+         class="flex flex-col md:flex-row justify-center items-center mb-10 gap-6"
+       >
+         <div class="w-24 flex-shrink-0">
+           
+           <img src="{% static 'images/CHS.png' %}" alt="Carmel High School Logo" />
+         </div>
+         <div class="text-center md:text-left">
+           <h2 class="text-xl font-semibold text-[#396DB2]">
+             CARMEL HIGH SCHOOL
+           </h2>
+           <p class="text-[16px] text-white">BASAVESHWARANAGAR, BANGALORE</p>
+         </div>
+       </div>
+
+       <!-- Footer Content -->
+       <div
+         class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+       >
+         <!-- Contact Section -->
+         <div class="text-white">
+           <h3 class="text-lg font-semibold text-white">Contact</h3>
+           <hr class="w-full my-2 border border-[#396DB2]" />
+           <p
+             class="text-[16px] flex items-center justify-center md:justify-start text-white"
+           >
+             📍 2nd Block, 3rd Stage, Judges' Colony, <br />
+             West of Chord Road, Basaveshwaranagar, Bangalore 560 079.
+           </p>
+           <p
+             class="text-[16px] mt-2 flex items-center justify-center md:justify-start text-white"
+           >
+             <a href="tel:080-23227015">📞 080-23227015</a>
+           </p>
+           <p
+             class="text-[16px] mt-2 flex items-center justify-center md:justify-start text-white"
+           >
+             <a href="mailto: info@carmelhighschool.org"
+               >✉️ info@carmelhighschool.org</a
+             >
+           </p>
+         </div>
+
+         <!-- About Section -->
+         <div>
+           <h3 class="text-lg font-semibold text-white">About</h3>
+           <hr class="w-full my-2 border border-[#396DB2]" />
+           <p class="text-[16px] text-white">
+             Carmel School is a learning community of excellence, enabling
+             students of different language abilities to become independent
+             learners and effective communicators.
+           </p>
+         </div>
+
+         <!-- Get Into Section -->
+         <div>
+           <h3 class="text-lg font-semibold text-white">Get Into</h3>
+           <hr class="w-full my-2 border border-[#396DB2]" />
+           <ul class="text-sm space-y-1">
+             <li>
+               <a
+                 href="#"
+                 class="text-gray-400 hover:text-gray-200 text-[16px]"
+                 >Welcome To Carmel</a
+               >
+             </li>
+             <li>
+               <a
+                 href="#"
+                 class="text-gray-400 hover:text-gray-200 text-[16px]"
+                 >Carmel Family</a
+               >
+             </li>
+             <li>
+               <a
+                 href="#"
+                 class="text-gray-400 hover:text-gray-200 text-[16px]"
+                 >Admission Overview</a
+               >
+             </li>
+             <li>
+               <a
+                 href="#"
+                 class="text-gray-400 hover:text-gray-200 text-[16px]"
+                 >Campus Tour</a
+               >
+             </li>
+             <li>
+               <a
+                 href="#"
+                 class="text-gray-400 hover:text-gray-200 text-[16px]"
+                 >Careers</a
+               >
+             </li>
+           </ul>
+         </div>
+       </div>
+
+      <!-- App Download Section -->
+<div class="text-center mt-10">
+ <h3 class="text-lg font-semibold text-white">Get Carmel 360 on:</h3>
+ <div class="flex justify-center gap-4 mt-3">
+     <a href="#">
+         <img src="{% static 'images/GooglePlay.png' %}" alt="Google Play" class="h-10 w-auto" />
+     </a>
+     <a href="#">
+         <img src="{% static 'images/AppStore.png' %}" alt="App Store" class="h-10 w-auto" />
+     </a>
+ </div>
+</div>
+
+<!-- Copyright & Social Icons -->
+<div class="flex flex-col md:flex-row justify-between items-center text-sm mt-10 border-t border-gray-700 pt-4 text-center md:text-left">
+ <p class="mb-4 md:mb-0 text-white">
+     Copyright &copy; 2021, Carmel Public School |
+     <a href="#" class="text-blue-400 hover:underline">Designed by: Calistaadesigns</a>
+ </p>
+ <div class="flex space-x-4">
+     <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook" /></a>
+     <a href="#"><img src="{% static 'images/mail.png' %}" alt="Mail" /></a>
+     <a href="#"><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn" /></a>
+     <a href="#"><img src="{% static 'images/skype.png' %}" alt="Skype" /></a>
+     <a href="#"><img src="{% static 'images/twitter.png' %}" alt="Twitter" /></a>
+     <a href="#"><img src="{% static 'images/instagram.png' %}" alt="Instagram" /></a>
+ </div>
+</div>
+     </div>
+   </footer>
+   <!-- Footer ends -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+     <script src="{% static 'js/script.js' %}"></script>
+     <script>
+      $(document).ready(function () {
+     $(".owl-carousel").owlCarousel({
+         loop: true,
+         margin: 16,
+         nav: false,  // Hide navigation arrows
+         dots: true,  // Show dots
+         dotsEach: 1, // Show dots per slide instead of per group
+         autoplay: true,
+         autoplayTimeout: 4000,
+         responsive: {
+             0: { items: 1 },  // Mobile: Show 1 item per slide
+             768: { items: 2 }, // Tablet: Show 2 items per slide
+             1024: { items: 4 } // Desktop: Show 3 items per slide
+         }
+     });
+ });
+ 
+     </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+       <script>
+         AOS.init({
+           duration: 1000, // Animation duration in ms
+           easing: "ease-out", // Easing effect
+           once: false, // Animate only once
+         });
+       </script>
+  </body>
+</html>

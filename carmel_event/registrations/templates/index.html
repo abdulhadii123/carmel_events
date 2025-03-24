@@ -1,0 +1,338 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home - Carmel{% endblock %}
+
+{% block content %}
+  <!-- Your homepage content here -->
+ <!-- Spotlight begin -->
+ <section
+ id="spotlight"
+ data-aos="fade-in"
+ data-aos-delay="300"
+ data-aos-duration="1000"
+ class="flex justify-center py-10 w-full"
+>
+ <div
+   class="relative wrapper h-[250px] md:h-[400px] lg:h-[500px] rounded-xl overflow-hidden bg-cover bg-center"
+   style="background-image: url('../static/images/spot.png');"
+ >
+   <!-- Overlay -->
+   <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+
+   <!-- Overlay Content -->
+   <div
+     class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 gap-4 md:gap-8"
+   >
+     <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white">
+       Carmel Run 2025
+     </h2>
+     <p class="text-xs md:text-lg font-semibold  text-white tracking-wider">
+       22 Jun 2025, 5:30 am – 11:00 am IST
+     </p>
+     <p class="text-xs md:text-lg font-semibold italic  text-white tracking-wider">
+       Dr. B.R. Ambedkar Stadium, Bengaluru, India
+     </p>
+     <a
+       href=""
+       class="mt-4 bg-orange-500 text-white font-bold italic py-2 px-4 md:px-6 rounded-lg hover:bg-orange-600 transition-all text-sm md:text-base"
+     >
+       Register Now
+     </a>
+   </div>
+ </div>
+</section>
+
+ 
+   <!--Spotlight ends  -->
+   <!-- ============================================================================================================================== -->
+   <!-- About begin -->
+   <section
+     id="about"
+     class="py-6 md:py-12"
+     data-aos="fade-up"
+     data-aos-delay="300"
+     data-aos-offset="200"
+   >
+     <div class="wrapper">
+       <div
+         class="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-10"
+       >
+         <!-- Left Section -->
+         <div class="left w-full lg:w-[48%] text-center lg:text-left">
+           <div class="ab flex items-left justify-baseline gap-[8px]">
+             <div class="icon">
+               <img src="{% static 'images/ab.png' %}" alt="" />
+             </div>
+             <h5 class="font-bold text-[16px] text-[#5A95D1] mb-[20px]">
+               About the Event
+             </h5>
+           </div>
+           <h1 class="text-2xl md:text-4xl text-black font-bold">
+             🏃‍♂️Carmel Run 2025 – Stride for a Cause! 🏅
+           </h1>
+           <p
+             class="text-base md:text-lg leading-relaxed mt-2 text-[#6D6D6D] mb-[10px] md:mb-[20px]"
+           >
+             The Carmel Run 2025 is more than just a race—it's a movement!
+             Organized by Carmel High School, Basaveshwaranagar, this event is
+             designed to ignite the spirit of fitness, camaraderie, and social
+             responsibility. Whether you're a seasoned runner or just starting
+             your fitness journey, there's a category for everyone!
+           </p>
+           <div class="flex relative">
+             <div class="relative w-full mt-6">
+               <svg
+                 width="100%"
+                 height="auto"
+                 viewBox="0 0 752 309"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg"
+                 class="relative left-[-5%] sm:left-[-10%] md:left-[-114px] top-[10px] sm:top-[20px] md:top-[36px] scale-75 sm:scale-90 md:scale-100"
+               >
+                 <path
+                   d="M340.5 101.328L341.012 100.469L340.5 101.328ZM478.54 254.328L479.348 254.917L478.54 254.328ZM170.412 202.492L169.905 203.354L169.93 203.368L169.955 203.381L170.412 202.492ZM751.108 307.994C751.657 307.935 752.054 307.441 751.994 306.892L751.025 297.945C750.966 297.396 750.473 296.999 749.924 297.058C749.375 297.118 748.978 297.611 749.037 298.16L749.898 306.113L741.945 306.975C741.396 307.034 740.999 307.527 741.058 308.076C741.118 308.626 741.611 309.022 742.16 308.963L751.108 307.994ZM-0.127263 1.99187C28.0778 5.61075 86.8087 14.968 151.652 31.2739C216.512 47.5839 287.406 70.8262 339.988 102.187L341.012 100.469C288.177 68.9575 217.057 45.6588 152.14 29.3343C87.2062 13.0057 28.3958 3.63515 0.127263 0.00813097L-0.127263 1.99187ZM339.988 102.187C405.868 141.478 446.198 171.507 467.094 195.725C477.537 207.828 483.053 218.398 484.545 227.873C486.03 237.305 483.544 245.768 477.732 253.739L479.348 254.917C485.424 246.584 488.1 237.595 486.521 227.562C484.948 217.573 479.176 206.666 468.608 194.418C447.483 169.935 406.904 139.767 341.012 100.469L339.988 102.187ZM477.732 253.739C474.54 258.115 468.935 261.457 461.204 263.791C453.488 266.122 443.766 267.415 432.492 267.777C409.948 268.503 381.363 265.504 350.577 259.802C289.002 248.396 218.814 226.212 170.868 201.602L169.955 203.381C218.113 228.1 288.496 250.336 350.213 261.768C381.072 267.484 409.813 270.508 432.557 269.776C443.927 269.411 453.839 268.105 461.783 265.706C469.712 263.311 475.792 259.792 479.348 254.917L477.732 253.739ZM170.918 201.63C157.942 194.006 144.963 183.918 135.766 173.104C126.536 162.252 121.284 150.876 123.291 140.606C125.285 130.405 134.551 120.818 155.534 113.772C176.494 106.733 208.894 102.328 256.608 102.328V100.328C208.812 100.328 176.16 104.736 154.897 111.876C133.657 119.008 123.529 128.964 121.329 140.222C119.142 151.411 124.896 163.41 134.242 174.4C143.622 185.428 156.791 195.65 169.905 203.354L170.918 201.63ZM256.608 102.328C351.902 102.328 454.041 136.537 543.051 179.356C632.048 222.17 707.827 273.546 750.373 307.779L751.627 306.221C708.967 271.897 633.06 220.437 543.918 177.554C454.788 134.677 352.334 100.328 256.608 100.328V102.328Z"
+                   fill="#5A95D1"
+                 />
+               </svg>
+
+               <!-- Floating Labels -->
+               <div
+                 class="absolute top-[77%] left-[30%] md:left-[8%] bg-yellow-300 px-3 py-1 sm:px-4 sm:py-2 rounded-full shadow-md flex items-center space-x-2 text-xs sm:text-sm md:text-base"
+               >
+                 <span>⚖️</span>
+                 <span class="font-semibold">Integrity</span>
+               </div>
+
+               <div
+                 class="absolute top-[24%] left-[30%] md:left-[8%] bg-orange-400 px-3 py-1 sm:px-4 sm:py-2 rounded-full shadow-md flex items-center space-x-2 text-xs sm:text-sm md:text-base"
+               >
+                 <span>🤝</span>
+                 <span class="font-semibold">Compassion</span>
+               </div>
+
+               <div
+                 class="absolute top-[43%] left-[15%] sm:left-[21%] bg-[#E39EEC] px-3 py-1 sm:px-4 sm:py-2 rounded-full shadow-md flex items-center space-x-2 text-xs sm:text-sm md:text-base"
+               >
+                 <span>🏆</span>
+                 <span class="font-semibold">Excellence</span>
+               </div>
+             </div>
+             <div class="absolute right-0 hidden sm:block">
+               <svg
+                 class=""
+                 width="208"
+                 height="200"
+                 viewBox="0 0 208 200"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg"
+               >
+                 <path
+                   d="M116.292 74.7531L116.243 75.7519L116.268 75.7531H116.292V74.7531ZM110.358 43.3868L110.674 42.4381L110.609 42.4165L110.542 42.404L110.358 43.3868ZM116.292 78.9918L117.222 78.6246L117.205 78.5797L117.183 78.5367L116.292 78.9918ZM207.417 196.041C207.919 195.81 208.139 195.217 207.909 194.715L204.156 186.535C203.925 186.033 203.332 185.812 202.83 186.043C202.328 186.273 202.108 186.867 202.338 187.369L205.674 194.64L198.403 197.976C197.901 198.206 197.681 198.8 197.911 199.302C198.141 199.804 198.735 200.024 199.237 199.794L207.417 196.041ZM0.166408 1.55238C7.99551 13.3672 23.1612 31.2118 43.2703 46.4515C63.377 61.6895 88.5048 74.3821 116.243 75.7519L116.341 73.7543C89.1462 72.4113 64.3988 59.9544 44.4783 44.8575C24.56 29.7624 9.54633 12.0868 1.83359 0.44762L0.166408 1.55238ZM116.292 75.7531C119.082 75.7531 120.805 73.4958 121.682 70.7528C122.575 67.9611 122.753 64.2803 122.264 60.5301C121.774 56.7704 120.601 52.8504 118.708 49.5755C116.817 46.3042 114.159 43.5999 110.674 42.4381L110.042 44.3355C112.915 45.2931 115.238 47.5692 116.976 50.5765C118.713 53.5802 119.818 57.2368 120.281 60.7888C120.746 64.3504 120.553 67.7164 119.777 70.1436C118.985 72.6195 117.741 73.7531 116.292 73.7531V75.7531ZM110.542 42.404C109.17 42.1466 107.627 42.3918 106.462 43.6096C105.328 44.7946 104.729 46.7225 104.78 49.446C104.884 54.8818 107.593 64.169 115.402 79.4469L117.183 78.5367C109.393 63.296 106.874 54.3569 106.78 49.4079C106.733 46.9391 107.292 45.635 107.907 44.992C108.491 44.3819 109.285 44.2031 110.174 44.3697L110.542 42.404ZM115.362 79.3589C121.743 95.5241 133.942 120.728 149.822 143.859C165.676 166.949 185.322 188.157 206.652 196.069L207.348 194.194C186.63 186.508 167.28 165.753 151.471 142.727C135.689 119.74 123.557 94.6735 117.222 78.6246L115.362 79.3589Z"
+                   fill="#5A95D1"
+                 />
+               </svg>
+             </div>
+           </div>
+         </div>
+
+         <!-- Right Section -->
+         <div
+           class="right bg-[#66C478] rounded-3xl w-full lg:w-[48%] p-8 flex flex-col items-center"
+         >
+           <div class="w-[100%] md:w-[90%]">
+             <img
+               src="{% static 'images/bgimage.png' %}"
+               alt="Event Image"
+               class="rounded-lg w-full mt-[28px]"
+             />
+           </div>
+           <div class="content flex items-center justify-center gap-4 my-4">
+             <div class="icon w-[40px] md:w-[50px]">
+               <img src="{% static 'images/Testimonial.png' %}" alt="Testimonial" />
+             </div>
+             <div class="para text-center">
+               <p class="text-white text-sm md:text-lg">
+                 "Every step you take is a step towards a healthier and happier
+                 tomorrow!"
+               </p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!-- About ends -->
+   <!-- ============================================================================================================================= -->
+   <!-- Category begins -->
+   <section
+     class="w-full bg-[#F9F9F9] py-12 md:py-24"
+     data-aos="fade-up"
+     data-aos-delay="300"
+     data-aos-offset="200"
+   >
+     <h2
+       class="text-2xl md:text-3xl font-bold mb-6 ml-[55px] text-left wrapper"
+     >
+       Category Details
+     </h2>
+
+     <div class="relative">
+       <!-- Swiper Container -->
+       <div class="swiper mySwiper">
+         <div class="swiper-wrapper w-full mb-10 md:pl-[110px] pl-0">
+           <!-- Card Items -->
+           <div class="swiper-slide flex justify-center">
+             <div
+               class="card bg-orange-500 text-white p-6 rounded-2xl shadow-lg flex flex-col w-full max-w-sm md:max-w-md"
+             >
+               <h3 class="font-bold text-lg mb-[28px]">3KM FUN RUN</h3>
+               <p class="text-lg">
+                 Event T-shirt, E-Certificate, breakfast, safety & medical
+                 support.
+               </p>
+             </div>
+           </div>
+
+           <div class="swiper-slide flex justify-center">
+             <div
+               class="card bg-cyan-500 text-white p-6 rounded-2xl shadow-lg flex flex-col w-full max-w-sm md:max-w-md"
+             >
+               <h3 class="font-bold text-lg mb-[28px]">Student 5KM</h3>
+               <p class="text-lg">
+                 Event T-shirt, Timed Bib, Finisher Medal, Breakfast, Safety &
+                 Medical Support.
+               </p>
+             </div>
+           </div>
+
+           <div class="swiper-slide flex justify-center">
+             <div
+               class="card bg-lime-500 text-white p-6 rounded-2xl shadow-lg flex flex-col w-full max-w-sm md:max-w-md"
+             >
+               <h3 class="font-bold text-lg mb-[28px]">Student 10KM</h3>
+               <p class="text-lg">
+                 Event T-shirt, Timed Bib, Finisher Medal, Breakfast, Safety &
+                 Medical Support.
+               </p>
+             </div>
+           </div>
+
+           <div class="swiper-slide flex justify-center">
+             <div
+               class="card bg-teal-400 text-white p-6 rounded-2xl shadow-lg flex flex-col w-full max-w-sm md:max-w-md"
+             >
+               <h3 class="font-bold text-lg mb-[28px]">Adult 5KM</h3>
+               <p class="text-lg">
+                 Event T-shirt, Timed Bib, Finisher Medal, Breakfast, Safety &
+                 Medical Support.
+               </p>
+               <p class="text-sm mt-2">
+                 No cash prize. Winners receive goodies & vouchers.
+               </p>
+             </div>
+           </div>
+
+           <div class="swiper-slide flex justify-center">
+             <div
+               class="card bg-yellow-500 text-black p-6 rounded-2xl shadow-lg flex flex-col w-full max-w-sm md:max-w-md"
+             >
+               <h3 class="font-bold text-lg mb-[28px]">Adult 10KM</h3>
+               <p class="text-lg">
+                 Event T-shirt, Timed Bib, Finisher Medal, Breakfast, Safety &
+                 Medical Support.
+               </p>
+               <p class="text-sm mt-2">
+                 No cash prize. Winners receive goodies & vouchers.
+               </p>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <!-- Navigation Buttons -->
+       <div
+         class="absolute bottom-[-35] right-[52px] flex justify-center gap-6 p-4"
+       >
+         <button class="w-full">
+           <svg
+             class="swiper-button-prev left-[-20px]"
+             width="40"
+             height="40"
+             viewBox="0 0 40 40"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+           >
+             <rect
+               x="1"
+               y="1"
+               width="38"
+               height="38"
+               rx="19"
+               stroke="#373737"
+               stroke-width="2"
+             />
+             <path
+               d="M26.6667 20.832C27.1269 20.832 27.5 20.4589 27.5 19.9987C27.5 19.5384 27.1269 19.1654 26.6667 19.1654H15.3452L19.7559 14.7546C20.0813 14.4292 20.0813 13.9015 19.7559 13.5761C19.4305 13.2507 18.9028 13.2507 18.5774 13.5761L12.7442 19.4094C12.4187 19.7349 12.4187 20.2625 12.7442 20.5879L18.5774 26.4213C18.9028 26.7467 19.4305 26.7467 19.7559 26.4213C20.0813 26.0959 20.0813 25.5682 19.7559 25.2428L15.3452 20.832H26.6667Z"
+               fill="#373737"
+             />
+           </svg>
+         </button>
+         <button class="w-full">
+           <svg
+             class="swiper-button-next"
+             width="40"
+             height="40"
+             viewBox="0 0 40 40"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+           >
+             <rect
+               x="1"
+               y="1"
+               width="38"
+               height="38"
+               rx="19"
+               stroke="#373737"
+               stroke-width="2"
+             />
+             <path
+               d="M13.3333 19.168C12.8731 19.168 12.5 19.5411 12.5 20.0013C12.5 20.4616 12.8731 20.8346 13.3333 20.8346H24.6548L20.2441 25.2454C19.9187 25.5708 19.9187 26.0985 20.2441 26.4239C20.5695 26.7493 21.0972 26.7493 21.4226 26.4239L27.2558 20.5906C27.5813 20.2651 27.5813 19.7375 27.2558 19.4121L21.4226 13.5787C21.0972 13.2533 20.5695 13.2533 20.2441 13.5787C19.9187 13.9041 19.9187 14.4318 20.2441 14.7572L24.6548 19.168H13.3333Z"
+               fill="#373737"
+             />
+           </svg>
+         </button>
+       </div>
+     </div>
+   </section>
+   <!-- Category ends -->
+   <!-- ==================================================================================================================== -->
+
+   <!-- Results begins -->
+   <section
+     class="text-center space-y-4 py-6 md:py-12"
+     data-aos="fade-right"
+     data-aos-delay="300"
+     data-aos-offset="200"
+   >
+     <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Results</h2>
+     <p class="text-sm md:text-base text-blue-500">
+       Click the button to view and download the results<span
+         class="text-gray-400"
+         >.</span
+       >
+     </p>
+     <a href=""
+       ><button
+         class="bg-orange-500 text-white font-semibold italic px-6 py-3 rounded-xl shadow-lg hover:bg-orange-600 transition mt-[20px]"
+       >
+         Register Now
+       </button></a
+     >
+   </section>
+
+  
+  <!-- Other sections -->
+{% endblock %}
+   

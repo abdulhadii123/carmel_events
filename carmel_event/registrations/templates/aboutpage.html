@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <!-- About begins -->
+    <section id="about" class="py-8 md:py-16" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200">
+      <div class="wrapper">
+        <div
+          class="flex flex-col md:flex-row items-center md:items-start gap-8 pb-[40px]"
+        >
+          <!-- Left Section -->
+          <div class="w-full md:w-1/2">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="">
+                <img src="{% static 'images/ab.png' %}" alt="Event Icon" class="" />
+              </div>
+              <h5 class="font-bold text-lg text-[#5A95D1]">About the Event</h5>
+            </div>
+            <h1 class="text-2xl md:text-4xl font-semibold text-black leading-snug">
+              🏃‍♂️ Carmel Run 2025 – Stride for a Cause! 🏅
+            </h1>
+          </div>
+
+          <!-- Right Section -->
+          <div class="w-full md:w-1/2">
+            <p class="text-base md:text-[18px] leading-[35px] text-[#6D6D6D]">
+              The Carmel Run 2025 is more than just a race—it's a movement!
+              Organized by Carmel High School, Basaveshwaranagar, this event is
+              designed to ignite the spirit of fitness, camaraderie, and social
+              responsibility. Whether you're a seasoned runner or just starting
+              your fitness journey, there's a category for everyone!
+            </p>
+          </div>
+        </div>
+        <div class="bottom ">
+            <a
+              href="https://youtu.be/NNCZ2wtHONc"
+              target="_blank"
+              class="relative block w-full "
+            >
+              <div class="imaage">
+                <img
+                  src="{% static 'images/videoo.png' %}"
+                  alt="Video Thumbnail"
+                  class="rounded-lg shadow-lg w-full w-full h-[200px] sm:h-[300px] md:h-[400px] object-cover"
+                />
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="bg-[#96969680] p-2 sm:p-4 rounded-full">
+                  <svg
+                    class="w-10 h-10 sm:w-12 sm:h-12 text-white bg-white rounded-3xl"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+      </div>
+    </section>
+    <!-- About ends -->
+
+    <!-- Story begins -->
+    <section class="bg-[#F9F9F9] py-10 md:py-20" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200">
+        <div class="wrapper">
+          <!-- Grid layout for large screens, stacked for small screens -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            
+            <!-- Event Story & Legacy -->
+            <div>
+              <h2 class="text-xl md:text-2xl font-bold text-gray-900 flex items-center gap-2">
+                🏡 Event Story & Legacy
+              </h2>
+              <p class="text-[#6D6D6D] mt-3 text-base md:text-[18px] leading-relaxed">
+                Carmel Run started as a small initiative by Carmel High School, Basaveshwaranagar, 
+                to encourage fitness and community engagement. Over the years, it has grown into a celebrated 
+                annual event, bringing together students, families, and fitness enthusiasts.
+              </p>
+            </div>
+      
+            <!-- Past Editions Impact -->
+            <div>
+              <h2 class="text-xl font-bold text-gray-900 flex items-center gap-2">
+                💡 Past Editions Impact:
+              </h2>
+              <ul class="mt-4">
+                <li class="flex items-center gap-4 mt-[28px]">
+                  <span class="w-12 h-8 flex items-center justify-center rounded-full bg-orange-200">
+                    ✨
+                  </span>
+                  <p class="text-[#6D6D6D] text-base md:text-[18px]">
+                    Thousands of participants across different age groups
+                  </p>
+                </li>
+                <li class="flex items-center gap-4 mt-[28px]">
+                  <span class="w-12 h-8 flex items-center justify-center rounded-full bg-blue-200">
+                    ❄️
+                  </span>
+                  <p class="text-[#6D6D6D] text-base md:text-[18px]">
+                    Raised funds for social causes & community well-being
+                  </p>
+                </li>
+                <li class="flex items-center gap-4 mt-[28px]">
+                  <span class="w-12 h-8 flex items-center justify-center rounded-full bg-green-200">
+                    🍃
+                  </span>
+                  <p class="text-[#6D6D6D] text-base md:text-[18px]">
+                    Inspired many to adopt a healthier lifestyle
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- Story ends -->
+      
+    <!-- Why join begins -->
+    <section class="py-12 md:py-24" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200">
+        <div class="wrapper text-center">
+          
+          <!-- Section Title -->
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 flex items-center justify-center gap-2">
+            🎯 Why Join Carmel Run?
+          </h2>
+      
+          <!-- Curved Dotted Line (SVG) -->
+          <div class="relative hidden md:block pt-[62px]">
+            <svg class="w-full absolute top-8 left-0" width="1119" height="128" viewBox="0 0 1119 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 48.5C87 11.5 282.6 44.6988 293 125.499C410.333 54.1657 663.7 -61.9004 738.5 44.4996C837.5 20.6664 1052 3.2 1118 124" stroke="#BCBCBC" stroke-width="2" stroke-dasharray="6 6"/>
+            </svg>
+          </div>
+      
+          <!-- Benefits Cards Section -->
+          <div class="flex flex-wrap justify-center md:justify-around gap-6 mt-16">
+  
+            <!-- Card 1 -->
+            <div class="bg-[#F9F9F9] h-auto md:h-72 w-full md:w-[20%] px-6 py-8 md:py-6 rounded-2xl shadow-lg text-left transform rotate-[-6deg] hover:rotate-[-3deg] transition duration-300">
+              <h3 class="text-lg font-semibold flex items-center gap-2 mb-4 md:mb-[28px]">🏃‍♂️ Stay Fit</h3>
+              <p class="text-gray-600 text-base md:text-sm mt-2 leading-[28px] md:leading-[32px]">
+                Engage in a healthy challenge that boosts physical & mental well-being.
+              </p>
+            </div>
+          
+            <!-- Card 2 -->
+            <div class="bg-[#F9F9F9] h-auto md:h-72 w-full md:w-[20%] px-6 py-8 md:py-6 rounded-2xl shadow-lg text-left transform rotate-[6deg] hover:rotate-[3deg] transition duration-300">
+              <h3 class="text-lg font-semibold flex items-center gap-2 mb-4 md:mb-[28px]">❤️ Support a Cause</h3>
+              <p class="text-gray-600 text-base md:text-sm mt-2 leading-[28px] md:leading-[32px]">
+                Every step contributes to a noble mission, impacting lives beyond the race.
+              </p>
+            </div>
+          
+            <!-- Card 3 -->
+            <div class="bg-[#F9F9F9] h-auto md:h-72 w-full md:w-[20%] px-6 py-8 md:py-6 rounded-2xl shadow-lg text-left transform rotate-[-6deg] hover:rotate-[-3deg] transition duration-300">
+              <h3 class="text-lg font-semibold flex items-center gap-2 mb-4 md:mb-[28px]">🥇 Earn Medals & Goodies</h3>
+              <p class="text-gray-600 text-base md:text-sm mt-2 leading-[28px] md:leading-[32px]">
+                All participants receive event T-shirts, finisher medals, and exclusive goodies.
+              </p>
+            </div>
+          
+            <!-- Card 4 -->
+            <div class="bg-[#F9F9F9] h-auto md:h-72 w-full md:w-[20%] px-6 py-8 md:py-6 rounded-2xl shadow-lg text-left transform rotate-[6deg] hover:rotate-[3deg] transition duration-300">
+              <h3 class="text-lg font-semibold flex items-center gap-2 mb-4 md:mb-[28px]">🎉 Enjoy a Fun Experience</h3>
+              <p class="text-gray-600 text-base md:text-sm mt-2 leading-[28px] md:leading-[32px]">
+                From exciting race-day vibes to post-run celebrations, it's an experience like no other!
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- Why join ends -->
+{% endblock %}

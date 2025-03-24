@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <!-- ============================================================================================================ -->
+
+    <!-- Registration begins -->
+    <section class="py-6 md:py-12" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+        <div class="wrapper">
+          <div class="main">
+            <h1 class="text-2xl md:text-3xl font-semibold mb-2">
+              📋 Carmel Run 2025 – Registration
+            </h1>
+            <p class="text-gray-600 text-base md:text-lg">
+              🏃‍♂️ Secure your spot & join the movement!
+            </p>
+          </div>
+        </div>
+      </section>
+      
+    <!-- Registration ends -->
+
+    <!-- ================================================================================================================== -->
+
+    <!-- Events & Fees begins -->
+    <section class="py-6 md:py-12 bg-[#F9F9F9]" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+        <div class="wrapper">
+          <div class="main">
+            <h1 class="text-2xl md:text-3xl font-semibold mb-2 text-center">
+              🎟 Event Categories & Fees
+            </h1>
+            <p class="text-base md:text-lg text-gray-600 text-center">
+              Choose your race category & enjoy exclusive benefits!
+            </p>
+          </div>
+        </div>
+      </section>
+      
+    <!--Events & Fees ends  -->
+
+    <!-- ===================================================================================================================== -->
+    <!-- Table begins -->
+    <section class="pb-6 md:pb-12 bg-[#F9F9F9]" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+      <div class="wrapper">
+        <!-- Table -->
+        <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-gray-200 border-b border-gray-300">
+                  <th
+                    class="py-3 pr-4 md:pl-12 pl-4 text-[#212121] font-semibold border-r border-gray-300 text-sm md:text-base"
+                  >
+                    Category
+                  </th>
+                  <th
+                    class="py-3 pr-4 md:pl-12 pl-4 text-[#212121] font-semibold border-r border-gray-300 text-sm md:text-base"
+                  >
+                    Registration Fee
+                  </th>
+                  <th
+                    class="py-3 pr-4 md:pl-12 pl-4 text-[#212121] font-semibold text-sm md:text-base"
+                  >
+                    Includes
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-300">
+                <tr>
+                  <td
+                    class="py-3 pr-4 md:pl-12 pl-4 flex items-center border-r border-gray-300 text-sm md:text-base text-[#6D6D6D]"
+                  >
+                    <span class="mr-2">🏃‍♂️</span>3KM Fun Run
+                  </td>
+                  <td
+                    class="py-3 pr-4 md:pl-12 pl-4 border-r border-gray-300 text-sm md:text-base text-[#6D6D6D]"
+                  >
+                    ₹499
+                  </td>
+                  <td class="py-3 pr-4 md:pl-12 pl-4 text-sm md:text-base text-[#6D6D6D]">
+                    T-shirt, E-Certificate, Breakfast, Medical Support
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="py-3 pr-4 md:pl-12 pl-4 flex items-center border-r border-gray-300 text-sm md:text-base text-[#6D6D6D]"
+                  >
+                    <span class="mr-2">🎓</span>Student 5KM
+                  </td>
+                  <td
+                    class="py-3 pr-4 md:pl-12 pl-4 border-r border-gray-300 text-sm md:text-base text-[#6D6D6D]"
+                  >
+                    ₹699
+                  </td>
+                  <td class="py-3 pr-4 md:pl-12 pl-4 text-sm md:text-base text-[#6D6D6D]">
+                    T-shirt, Timed Bib, Medal, Breakfast, Medical Support
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="py-3 pr-4 md:pl-12 pl-4 flex items-center border-r border-gray-300 text-sm md:text-base text-[#6D6D6D]"
+                  >
+                    <span class="mr-2">🎓</span>Student 10KM
+                  </td>
+                  <td
+                    class="py-3 pr-4 md:pl-12 pl-4 border-r border-gray-300 text-sm md:text-base text-[#6D6D6D]"
+                  >
+                    ₹799
+                  </td>
+                  <td class="py-3 pr-4 md:pl-12 pl-4 text-sm md:text-base text-[#6D6D6D]">
+                    T-shirt, Timed Bib, Medal, Breakfast, Medical Support
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Note Section -->
+        <div class="text-center text-xs md:text-sm py-8">
+          <p class="flex items-center justify-center text-[#6D6D6D]">
+            <span class="mr-2">🎁</span> Goodies & vouchers for winners (No cash
+            prizes in adult categories)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Table ends  -->
+
+    <!-- ========================================================================================================== -->
+
+    <!-- Form begins -->
+    <section class="py-8 md:py-16 " data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+        <div class="wrapper">
+          <div class="main w-full flex flex-col lg:flex-row justify-between items-center gap-10">
+            
+            <!-- Left: Form -->
+            <div class="left w-full lg:w-[49%] bg-white p-6 shadow-md rounded-lg">
+              <h2 class="text-2xl font-semibold mb-6">Registration Form</h2>
+              <form id="registrationForm" method="POST">
+                {% csrf_token %}
+                <div id="student-container">
+                    <!-- The first registration form (will be cloned when adding more) -->
+                    <div class="student-form border p-4 rounded-lg mb-4 relative">
+                        <button type="button" class="absolute top-2 right-2 text-red-500 font-bold hidden remove-btn">X</button>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700">Name</label>
+                                <input type="text" name="fullname[]" placeholder="Full Name" class="w-full px-4 py-2 border rounded-lg" required />
+                            </div>
+                            <div>
+                                <label class="block text-gray-700">Phone Number</label>
+                                <input type="text" name="phone[]" placeholder="+91" class="w-full px-4 py-2 border rounded-lg" required />
+                            </div>
+                            <div>
+                                <label class="block text-gray-700">Email</label>
+                                <input type="email" name="email[]" placeholder="john@gmail.com" class="w-full px-4 py-2 border rounded-lg" required />
+                            </div>
+                            <div>
+                                <label class="block text-gray-700">Date of Birth</label>
+                                <input type="date" name="date_of_birth[]" class="w-full px-4 py-2 border rounded-lg" required />
+                            </div>
+                            <div>
+                                <label class="block text-gray-700">Gender</label>
+                                <select name="gender[]" class="w-full px-4 py-2 border rounded-lg" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700">Category</label>
+                                <select name="category[]" class="w-full px-4 py-2 border rounded-lg" required>
+                                    <option value="">Select a category</option>
+                                    {% for category in categories %}
+                                        <option value="{{ category.id }}">{{ category.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700">T-Shirt Size</label>
+                                <select name="t_shirt_size[]" class="w-full px-4 py-2 border rounded-lg" required>
+                                    <option value="">Select Size</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700">Bib Collection Point</label>
+                                <select name="collection_point[]" class="w-full px-4 py-2 border rounded-lg" required>
+                                    {% for point in collectionpoints %}
+                                        <option value="{{ point.id }}">{{ point.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Buttons -->
+                <div class="mt-6 flex gap-4">
+                    <button type="button" onclick="addStudentField()" class="italic px-6 py-2 bg-gray-200 font-bold rounded-lg hover:bg-gray-300">
+                        Register More +
+                    </button>
+                    <button type="submit" class="px-6 py-2 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600">
+                        Register Now
+                    </button>
+                </div>
+            </form>
+            
+            </div>
+      
+            <!-- Right: Image -->
+            <div class="right w-full lg:w-[49%] flex justify-center">
+              <div class="image w-full">
+                <img src="{% static 'images/form-image.png' %}" alt="Form Image" class="w-full lg:h-[600px] rounded-lg shadow-md">
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+    <!-- Form ends -->
+
+    <!-- =================================================================================================================== -->
+
+   {% endblock %}
+
+   {% block extra_scripts %}
+   
+   <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      let studentContainer = document.getElementById("student-container");
+      let maxStudents = 10; // Limit to 10 students
+      let studentCount = 1; // Starts with one form
+  
+      function addStudentField() {
+          if (studentCount >= maxStudents) {
+              alert("You can register a maximum of 10 students.");
+              return;
+          }
+  
+          let firstForm = document.querySelector(".student-form");
+          let newForm = firstForm.cloneNode(true);
+  
+          // Reset input values
+          newForm.querySelectorAll("input, select").forEach(input => {
+              input.value = "";
+          });
+  
+          // Show remove button for the new form
+          newForm.querySelector(".remove-btn").classList.remove("hidden");
+  
+          // Add event listener for remove button
+          newForm.querySelector(".remove-btn").addEventListener("click", function () {
+              newForm.remove();
+              studentCount--;
+          });
+  
+          studentContainer.appendChild(newForm);
+          studentCount++;
+      }
+  
+      // Expose function globally
+      window.addStudentField = addStudentField;
+  });
+  
+   </script>
+   
+   {% endblock %}
